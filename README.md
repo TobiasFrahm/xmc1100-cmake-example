@@ -62,13 +62,13 @@ cd <repository-folder>
 
 ### 2. Building the Project
 
-Using Make:
+Using the script:
 
 ```sh
 ./build.sh
 ```
 
-Or using CMake:
+Step by Step:
 
 ```sh
 rm -rf build/
