@@ -1,0 +1,26 @@
+
+Checks: >
+  clang-analyzer-*,
+  bugprone-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  misc-*,
+  cppcoreguidelines-*,
+  -modernize-use-trailing-return-type  # Beispiel, um einen Check auszuschließen
+
+WarningsAsErrors: ''  # Optionale Einstellung, um Warnungen als Fehler zu behandeln
+
+HeaderFilterRegex: '.*'
+# AnalyzeTemporaryDtors: false
+CheckOptions:
+  - key:             modernize-use-nullptr.NullMacros
+    value:           'NULL'  # Verwende nullptr statt NULL
+
+# Compilation options (Include paths)
+ExtraArgs:
+  - '-I./build/Libraries/CMSIS/Include'
+  - '-I./build/Lbraries/CMSIS/Infineon/XMC4700_series/Include'
+  - '-I./build/Libraries/XMCLib/inc'
+  - '-I./build/Libraries/Newlib'
+  - '-I./build/Dave'

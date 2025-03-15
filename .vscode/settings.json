@@ -1,0 +1,9 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    "cmake.cmakePath": "/usr/bin/cmake",
+    "cmake.environment": {
+        "PATH": "/usr/bin:/usr/local/bin"
+    }
+}

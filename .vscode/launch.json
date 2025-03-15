@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug XMC1100 (J-Link SWD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "device": "XMC1100",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/XMC1100_Project.elf",
+            "serverArgs": [
+                "-if", "SWD",
+                "-speed", "1000"
+            ],
+            "svdFile": "${workspaceFolder}/XMC1100.svd",
+            "postLaunchCommands": [
+                "monitor reset halt",
+                "load",
+                "monitor reset",
+                "break main",
+                "continue"
+            ],
+            "showDevDebugOutput": "raw"
+        }
+    ]
+}
